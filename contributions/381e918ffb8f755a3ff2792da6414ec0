@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> Contriboot </title>
+    <meta name="keywords" content=" contributions, unconference ">
+    <meta name="theme-color" content="#601f27">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/static/basic-theme/images/favicon.jpg" type="image/x-icon">
+    <link href="/static/basic-theme/css/style.css" rel="stylesheet" type="text/css"/>
+
+    <!-- The HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body class="site">
+    <div class="wrapper">
+      <div class="">
+        <header class="site-header">
+          <div class="clearfix site-header-intro" >
+            <div class="col-xs-8">
+              <a href="/" class="headline-anchor">
+                <h1 class="headline">
+                  Conferencia Internacional de Software Libre <br>April 25-27 Palacio del Segundo Cabo Havana/Cuba
+                </h1>
+              </a>
+            </div>
+
+          </div>
+          <div class="clearfix">
+            <div class="col-xs-12">
+
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="container clearfix">
+        <nav class="navigation">
+          <ul class="menu">
+            <li class="menu__item"><a href="http://www.cubaconf.org/" class="menu__item__link menu__item__link--home">Home</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/tickets/" class="menu__item__link">Tickets</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/location/" class="menu__item__link">Location</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/sponsoring/" class="menu__item__link">Sponsoring</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/code-of-conduct/" class="menu__item__link">Code of Conduct</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/contact/" class="menu__item__link">Contact</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/blog" class="menu__item__link">Blog</a></li>
+            <li class="menu__item"><a href="/" class="menu__item__link">Contributions and Interests</a></li>
+          </ul>
+        </nav>
+        <div class="content">
+        <div ng-app="votes" ng-init="votes='9';hasVoted=false;id='381e918ffb8f755a3ff2792da6414ec0'">
+  <div ng-controller="VoteController">
+
+    <div class="row">
+      <div class="col-md-9">
+        <h2>Protocolo de migración a LibreOffice. Experiencia en Cuba.</h2>
+        <h3 class="submission-name">Carlos Parra Zaldivar
+             - <a href="http://twitter.com/carlosparraZ">@carlosparraZ</a>
+        </h3>
+        <div class="submission-description"><p>Se expone el protocolo aprobado por The Document Foundation para lograr una migración a la plataforma ofimáticas LibreOffice, partiendo del entorno de trabajo de los usuarios, sin eliminar los software que se usan normalmente para estas tareas. Se expone la experiencia y logros alcanzados en la Dirección Provincial de Comunales en la provincia de Holguín en este sentido, en la que se ha logrado migrar toda la ofimática a esta suite libre, tanto en sistemas operativos Windows, como GNU/Linux.</p></div>
+
+      </div>
+      <div class="col-md-3 text-center control-col">
+        <div class="vote-count">
+          {{votes}}
+        </div>
+        <form name="form" role="form" novalidate ng-submit="upvote()">
+          <button class="btn btn-primary btn-lg vote-button" ng-disabled="hasVoted">
+            <span ng-if="!hasVoted">
+              I'm interested
+            </span>
+            <span ng-if="hasVoted">
+              Thanks
+            </span>
+
+            <span ng-class="{'glyphicon-heart': hasVoted, 'glyphicon-heart-empty': !hasVoted}"
+            class="glyphicon"></span>
+          </button>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="/static/bower_components/angular/angular.js"></script>
+<script src="/static/basic-theme/votes.js"></script>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

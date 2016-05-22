@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> Contriboot </title>
+    <meta name="keywords" content=" contributions, unconference ">
+    <meta name="theme-color" content="#601f27">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/static/basic-theme/images/favicon.jpg" type="image/x-icon">
+    <link href="/static/basic-theme/css/style.css" rel="stylesheet" type="text/css"/>
+
+    <!-- The HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body class="site">
+    <div class="wrapper">
+      <div class="">
+        <header class="site-header">
+          <div class="clearfix site-header-intro" >
+            <div class="col-xs-8">
+              <a href="/" class="headline-anchor">
+                <h1 class="headline">
+                  Conferencia Internacional de Software Libre <br>April 25-27 Palacio del Segundo Cabo Havana/Cuba
+                </h1>
+              </a>
+            </div>
+
+          </div>
+          <div class="clearfix">
+            <div class="col-xs-12">
+
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="container clearfix">
+        <nav class="navigation">
+          <ul class="menu">
+            <li class="menu__item"><a href="http://www.cubaconf.org/" class="menu__item__link menu__item__link--home">Home</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/tickets/" class="menu__item__link">Tickets</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/location/" class="menu__item__link">Location</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/sponsoring/" class="menu__item__link">Sponsoring</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/code-of-conduct/" class="menu__item__link">Code of Conduct</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/contact/" class="menu__item__link">Contact</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/blog" class="menu__item__link">Blog</a></li>
+            <li class="menu__item"><a href="/" class="menu__item__link">Contributions and Interests</a></li>
+          </ul>
+        </nav>
+        <div class="content">
+        <div ng-app="votes" ng-init="votes='19';hasVoted=false;id='9ac76c2b7dbfd0ce264712559afc4bc2'">
+  <div ng-controller="VoteController">
+
+    <div class="row">
+      <div class="col-md-9">
+        <h2>EducaLibre, Disminuyendo la brecha digital con Tecnologias Libres</h2>
+        <h3 class="submission-name">Jose Luis Ahumada Hernandez
+             - <a href="http://twitter.com/bartoc3">@bartoc3</a>
+        </h3>
+        <div class="submission-description"><p>¿En que consiste? </p>
+
+<p>El proyecto Educalibre consiste en realizar una invitación a los profesionales de la región a tomar parte activa de la solución a los problemas sociales existentes en nuestras comunidades, a través de la enseñanza de sus conocimientos a los jóvenes de poblaciones vulnerables, con énfasis en empleo de las TIC como herramienta de apoyo para la impartición de clases con Tecnologias Libres.  Desde el año 2014 se han realizado cursos enfocados a tecnologias Libres en Varias Poblaciones de la region Caribe (Colombia).</p>
+
+<p>Los estudiantes estuvieron muy agradecidos por lo didáctico, ameno, personalizado e innovador del curso. Agradecimientos que nos inspiran y nos entusiasman a continuar realizando más cursos con tecnologias libres. Educalibre se diferencia de otros proyectos sociales porque enfatiza en que la solución a la pobreza es la educación y la democratización de la información. </p>
+
+<p>Insiste en que hay que enseñar a éstas comunidades a ser independientes, a sus hijos a obtener recursos por mano propia, y no volverlas dependientes de donaciones. Educalibre innova en la forma de impartir clases. Intenta aplicar las Tecnologias Libres para la enseñanza de cualquier área del conocimiento. Se diseñan los cursos de tal forma que sean varias personas las que puedan dictarlo, evitando el agotamiento de los voluntarios. </p>
+
+<p>Buscamos fomentar la amistad entre estudiantes y voluntarios, promoviendo el intercambio de experiencias, gustos y culturas. Finalmente, nuestro objetivo más importante es invitar a nuestros estudiantes beneficiados a hacer por su comunidad lo que hacemos nosotros hoy por ellos. Ha sido una bella experiencia, nacida de una noble iniciativa, en donde hemos intentado enseñar lo que sabemos, pero gratamente podemos decir que hemos sido los que más han aprendido con este proyecto.</p></div>
+
+      </div>
+      <div class="col-md-3 text-center control-col">
+        <div class="vote-count">
+          {{votes}}
+        </div>
+        <form name="form" role="form" novalidate ng-submit="upvote()">
+          <button class="btn btn-primary btn-lg vote-button" ng-disabled="hasVoted">
+            <span ng-if="!hasVoted">
+              I'm interested
+            </span>
+            <span ng-if="hasVoted">
+              Thanks
+            </span>
+
+            <span ng-class="{'glyphicon-heart': hasVoted, 'glyphicon-heart-empty': !hasVoted}"
+            class="glyphicon"></span>
+          </button>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="/static/bower_components/angular/angular.js"></script>
+<script src="/static/basic-theme/votes.js"></script>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> Contriboot </title>
+    <meta name="keywords" content=" contributions, unconference ">
+    <meta name="theme-color" content="#601f27">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/static/basic-theme/images/favicon.jpg" type="image/x-icon">
+    <link href="/static/basic-theme/css/style.css" rel="stylesheet" type="text/css"/>
+
+    <!-- The HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body class="site">
+    <div class="wrapper">
+      <div class="">
+        <header class="site-header">
+          <div class="clearfix site-header-intro" >
+            <div class="col-xs-8">
+              <a href="/" class="headline-anchor">
+                <h1 class="headline">
+                  Conferencia Internacional de Software Libre <br>April 25-27 Palacio del Segundo Cabo Havana/Cuba
+                </h1>
+              </a>
+            </div>
+
+          </div>
+          <div class="clearfix">
+            <div class="col-xs-12">
+
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="container clearfix">
+        <nav class="navigation">
+          <ul class="menu">
+            <li class="menu__item"><a href="http://www.cubaconf.org/" class="menu__item__link menu__item__link--home">Home</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/tickets/" class="menu__item__link">Tickets</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/location/" class="menu__item__link">Location</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/sponsoring/" class="menu__item__link">Sponsoring</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/code-of-conduct/" class="menu__item__link">Code of Conduct</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/contact/" class="menu__item__link">Contact</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/blog" class="menu__item__link">Blog</a></li>
+            <li class="menu__item"><a href="/" class="menu__item__link">Contributions and Interests</a></li>
+          </ul>
+        </nav>
+        <div class="content">
+        <div ng-app="votes" ng-init="votes='0';hasVoted=false;id='4a6f3ea506b3f48f844d4163a635ed90'">
+  <div ng-controller="VoteController">
+
+    <div class="row">
+      <div class="col-md-9">
+        <h2>Open-sourcing RIPE Atlas </h2>
+        <h3 class="submission-name">Michela Galante 
+             - <a href="http://twitter.com/MichelaGalan">@MichelaGalan</a>
+        </h3>
+        <div class="submission-description"><p>RIPE Atlas is a global network of probes that measure Internet connectivity and reachability. More then 9000 hardware probes are hosted by the community of volunteers. Supported measurements are ping, traceroute6, DNS, NTP, and TLS. All the probes perform constant measurements towards root name servers, and the users are able to start their own measurements from up to 500 probes at the time, to the target of their own choice. All the results of performed measurements are publicly available as open data.
+In addition to the web interface &amp; the API calls for starting your own measurements, and for downloading results, there is now CLI toolset. This open-source toolset is the newest addition to the large collection of tools written by RIPE NCC developers &amp; the community of volunteers, individually or during two hackathon runs. 
+https://atlas.ripe.net
+https://en.wikipedia.org/wiki/RIPE<em>Atlas
+My goals with this presentation are: to encourage the conference participants to contribute to the free &amp; open source code related to RIPE Atlas &amp; port the toolset to Linux/BSD distributions; to use the existing data, start their own measurements, and to share results by writing papers &amp; giving presentations.
+In addition we have a sub-project which is connecting a RIPE Atlas probe in every hackerspace in the world: 
+https://wiki.techinc.nl/index.php/RIPE</em>Atlas<em>probes</em>at<em>hackerspaces
+https://wiki.hackerspaces.org/RIPE</em>Atlas
+About RIPE NCC: We&#39;re an independent, not-for-profit membership organisation that supports the infrastructure of the Internet through technical coordination in our service region. Our most prominent activity is to act as the Regional Internet Registry (RIR), such as LACNIC and ARIN, providing global Internet resources and related services (IPv4, IPv6 and AS Number resources) to members in our service region.
+Our membership consists mainly of Internet service providers (ISPs), telecommunication organisations and large corporations located in Europe, the Middle East and parts of Central Asia.
+We also provide services for the benefit of the Internet community at large.</p></div>
+
+      </div>
+      <div class="col-md-3 text-center control-col">
+        <div class="vote-count">
+          {{votes}}
+        </div>
+        <form name="form" role="form" novalidate ng-submit="upvote()">
+          <button class="btn btn-primary btn-lg vote-button" ng-disabled="hasVoted">
+            <span ng-if="!hasVoted">
+              I'm interested
+            </span>
+            <span ng-if="hasVoted">
+              Thanks
+            </span>
+
+            <span ng-class="{'glyphicon-heart': hasVoted, 'glyphicon-heart-empty': !hasVoted}"
+            class="glyphicon"></span>
+          </button>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="/static/bower_components/angular/angular.js"></script>
+<script src="/static/basic-theme/votes.js"></script>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

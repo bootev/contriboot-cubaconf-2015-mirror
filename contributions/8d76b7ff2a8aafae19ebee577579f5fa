@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> Contriboot </title>
+    <meta name="keywords" content=" contributions, unconference ">
+    <meta name="theme-color" content="#601f27">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/static/basic-theme/images/favicon.jpg" type="image/x-icon">
+    <link href="/static/basic-theme/css/style.css" rel="stylesheet" type="text/css"/>
+
+    <!-- The HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body class="site">
+    <div class="wrapper">
+      <div class="">
+        <header class="site-header">
+          <div class="clearfix site-header-intro" >
+            <div class="col-xs-8">
+              <a href="/" class="headline-anchor">
+                <h1 class="headline">
+                  Conferencia Internacional de Software Libre <br>April 25-27 Palacio del Segundo Cabo Havana/Cuba
+                </h1>
+              </a>
+            </div>
+
+          </div>
+          <div class="clearfix">
+            <div class="col-xs-12">
+
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="container clearfix">
+        <nav class="navigation">
+          <ul class="menu">
+            <li class="menu__item"><a href="http://www.cubaconf.org/" class="menu__item__link menu__item__link--home">Home</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/tickets/" class="menu__item__link">Tickets</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/location/" class="menu__item__link">Location</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/sponsoring/" class="menu__item__link">Sponsoring</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/code-of-conduct/" class="menu__item__link">Code of Conduct</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/contact/" class="menu__item__link">Contact</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/blog" class="menu__item__link">Blog</a></li>
+            <li class="menu__item"><a href="/" class="menu__item__link">Contributions and Interests</a></li>
+          </ul>
+        </nav>
+        <div class="content">
+        <div ng-app="votes" ng-init="votes='8';hasVoted=false;id='8d76b7ff2a8aafae19ebee577579f5fa'">
+  <div ng-controller="VoteController">
+
+    <div class="row">
+      <div class="col-md-9">
+        <h2>Geotecnologías Libres: OSGeo, Geoinquietos, OSM</h2>
+        <h3 class="submission-name">Mauricio Miranda
+             - <a href="http://twitter.com/achikipaun">@achikipaun</a>
+        </h3>
+        <div class="submission-description"><p>La tecnología relacionada a la geografía y la cartografía ya no son una novedad. La información territorial es importante en prácticamente todas las industrias y casi cualquier organización, ya sea pública o privada, tiene información georreferenciable.</p>
+
+<p>Sin embargo, el acceso a herramientas para manipulación, procesamiento y publicación de esta información muchas veces se ve restringido o limitado por las tecnologías privativas elegidas por dichas organizaciones. Esto no tiene por qué ser así, al día de hoy contamos con alternativas libres de igual o incluso mejor calidad para llevar a cabo cualquier proyecto relacionado con los sistemas de información geográfica.</p>
+
+<p>Existen comunidades muy grandes y fuertes, formadas por personas, empresas y organismos, tanto de gobierno como ONGs, que dan respaldo a estas herramientas y trabajan diariamente para promover su uso y desarrollo.</p>
+
+<p>Personalmente, vengo trabajando con la fundación <a href="http://www.osgeo.org">OSGeo</a> desde hace ya muchos años, con el objetivo de llevar estas tecnologías a todos los lugares posibles dentro de Latinoamérica. También participo de la comunidad de <a href="http://www.geoinquietos.org">Geoinquietos-Argentina</a> con la que estamos organizando una conferencia <a href="http://www.foss4g-ar.org">FOSS4G</a> (Free and Open Source Software For Geospatial) en Buenos Aires como continuación de la realizada en el 2013 en el <a href="http://www.ign.gob.ar/novedades/Foss4gFinal">Instituto Geográfico Nacional</a>.  </p>
+
+<p>Además, participo de la comunidad de <a href="http://ww.osm.org">OpenStreetMap</a>, sobre todo en OSM-Latam, en donde nació <a href="http://mapazonia.org">Mapazonia</a>, un proyecto abierto para mapear colaborativamente la Amazonia.</p>
+
+<p>La idea sería poder colaborar con el evento, dando charlas y/o talleres acerca del uso de geotecnologías libres y promocionar las comunidades y herramientas existentes con el objetivo de ayudar a hacer crecer la comunidad cubana e integrar a sus miembros con el resto de los grupos latinos.</p></div>
+
+      </div>
+      <div class="col-md-3 text-center control-col">
+        <div class="vote-count">
+          {{votes}}
+        </div>
+        <form name="form" role="form" novalidate ng-submit="upvote()">
+          <button class="btn btn-primary btn-lg vote-button" ng-disabled="hasVoted">
+            <span ng-if="!hasVoted">
+              I'm interested
+            </span>
+            <span ng-if="hasVoted">
+              Thanks
+            </span>
+
+            <span ng-class="{'glyphicon-heart': hasVoted, 'glyphicon-heart-empty': !hasVoted}"
+            class="glyphicon"></span>
+          </button>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="/static/bower_components/angular/angular.js"></script>
+<script src="/static/basic-theme/votes.js"></script>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

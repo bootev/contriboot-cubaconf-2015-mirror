@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> Contriboot </title>
+    <meta name="keywords" content=" contributions, unconference ">
+    <meta name="theme-color" content="#601f27">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/static/basic-theme/images/favicon.jpg" type="image/x-icon">
+    <link href="/static/basic-theme/css/style.css" rel="stylesheet" type="text/css"/>
+
+    <!-- The HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body class="site">
+    <div class="wrapper">
+      <div class="">
+        <header class="site-header">
+          <div class="clearfix site-header-intro" >
+            <div class="col-xs-8">
+              <a href="/" class="headline-anchor">
+                <h1 class="headline">
+                  Conferencia Internacional de Software Libre <br>April 25-27 Palacio del Segundo Cabo Havana/Cuba
+                </h1>
+              </a>
+            </div>
+
+          </div>
+          <div class="clearfix">
+            <div class="col-xs-12">
+
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="container clearfix">
+        <nav class="navigation">
+          <ul class="menu">
+            <li class="menu__item"><a href="http://www.cubaconf.org/" class="menu__item__link menu__item__link--home">Home</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/tickets/" class="menu__item__link">Tickets</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/location/" class="menu__item__link">Location</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/sponsoring/" class="menu__item__link">Sponsoring</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/code-of-conduct/" class="menu__item__link">Code of Conduct</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/contact/" class="menu__item__link">Contact</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/blog" class="menu__item__link">Blog</a></li>
+            <li class="menu__item"><a href="/" class="menu__item__link">Contributions and Interests</a></li>
+          </ul>
+        </nav>
+        <div class="content">
+        <div ng-app="votes" ng-init="votes='10';hasVoted=false;id='67af42760d61a70a66541046835c56a4'">
+  <div ng-controller="VoteController">
+
+    <div class="row">
+      <div class="col-md-9">
+        <h2>Desarrollo ágil de aplicaciones con Python utilizando el framework web2py</h2>
+        <h3 class="submission-name">Carlos Cesar Caballero Díaz
+             - <a href="http://twitter.com/ccesarcaball">@ccesarcaball</a>
+        </h3>
+        <div class="submission-description"><p>Web2py es un marco de trabajo para el desarrollo rápido y seguro de aplicaciones web utilizando el lenguaje de programación Python, fue creado con el objetivo de hacer el desarrollo web fácil, rápido y seguro.
+Esta considerado como un full-stack framework debido a que incluye todos los componentes necesarios para hacer aplicaciones web completamente funcionales y esta diseñado para guiarnos a los desarrolladores a seguir buenas prácticas de la ingeniería de software, como es el uso del patrón MVC (Modelo-Vista-Controlador).
+Lo consideramos una excelente herramienta para pequeñas empresas con escaso ancho de banda debido a que incluye prácticamente todo lo necesario para llevar a cabo proyectos sin la necesidad de descargar herramientas extras y permite el trabajo de forma local, sin conexión a la red, bajo la promesa de que la aplicación se comportará exactamente igual una vez subida al servidor.</p>
+
+<p>Web2py is a secure web application framework for rapid development using the Python programming language, was created with the aim of making web development easy, fast and secure.
+It is considered as a full-stack framework because it includes all components necessary to make fully functional web applications and is designed to guide developers to follow good practices of software engineering, as is the use of MVC (Model-View-Controller).
+We consider it an excellent tool for small businesses with limited bandwidth because it includes virtually everything needed to carry out projects without the need to download extra tools and allows work locally without a network connection, promising the application will behave exactly like once uploaded to the server.</p></div>
+
+      </div>
+      <div class="col-md-3 text-center control-col">
+        <div class="vote-count">
+          {{votes}}
+        </div>
+        <form name="form" role="form" novalidate ng-submit="upvote()">
+          <button class="btn btn-primary btn-lg vote-button" ng-disabled="hasVoted">
+            <span ng-if="!hasVoted">
+              I'm interested
+            </span>
+            <span ng-if="hasVoted">
+              Thanks
+            </span>
+
+            <span ng-class="{'glyphicon-heart': hasVoted, 'glyphicon-heart-empty': !hasVoted}"
+            class="glyphicon"></span>
+          </button>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="/static/bower_components/angular/angular.js"></script>
+<script src="/static/basic-theme/votes.js"></script>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

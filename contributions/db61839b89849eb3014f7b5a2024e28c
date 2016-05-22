@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> Contriboot </title>
+    <meta name="keywords" content=" contributions, unconference ">
+    <meta name="theme-color" content="#601f27">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/static/basic-theme/images/favicon.jpg" type="image/x-icon">
+    <link href="/static/basic-theme/css/style.css" rel="stylesheet" type="text/css"/>
+
+    <!-- The HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body class="site">
+    <div class="wrapper">
+      <div class="">
+        <header class="site-header">
+          <div class="clearfix site-header-intro" >
+            <div class="col-xs-8">
+              <a href="/" class="headline-anchor">
+                <h1 class="headline">
+                  Conferencia Internacional de Software Libre <br>April 25-27 Palacio del Segundo Cabo Havana/Cuba
+                </h1>
+              </a>
+            </div>
+
+          </div>
+          <div class="clearfix">
+            <div class="col-xs-12">
+
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="container clearfix">
+        <nav class="navigation">
+          <ul class="menu">
+            <li class="menu__item"><a href="http://www.cubaconf.org/" class="menu__item__link menu__item__link--home">Home</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/tickets/" class="menu__item__link">Tickets</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/location/" class="menu__item__link">Location</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/sponsoring/" class="menu__item__link">Sponsoring</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/code-of-conduct/" class="menu__item__link">Code of Conduct</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/contact/" class="menu__item__link">Contact</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/blog" class="menu__item__link">Blog</a></li>
+            <li class="menu__item"><a href="/" class="menu__item__link">Contributions and Interests</a></li>
+          </ul>
+        </nav>
+        <div class="content">
+        <div ng-app="votes" ng-init="votes='4';hasVoted=false;id='db61839b89849eb3014f7b5a2024e28c'">
+  <div ng-controller="VoteController">
+
+    <div class="row">
+      <div class="col-md-9">
+        <h2>OpenStreetMap en Latinoamérica</h2>
+        <h3 class="submission-name">Gonzalo Gabriel Perez
+             - <a href="http://twitter.com/zalitoar">@zalitoar</a>
+        </h3>
+        <div class="submission-description"><p>OpenStreetMap es uno de los proyectos de datos libres más ambiciosos que existe, teniendo un alcance global.</p>
+
+<p>Desde los primeros años de vida del proyecto la comunidad entera buscó consensuar métodos de relevamiento y edición -mapeo-, generar herramientas y responder a otras necesidades relacionadas a los datos georreferenciados a nivel general, pero no fue suficiente ya que existen necesidades puntuales que varían según la región, cultura, acceso a la tecnología, riesgos, idioma y otros factores. Siendo así, comenzaron a organizarse comunidades locales y luego nacionales en diferentes partes del mundo.</p>
+
+<p>En 2009 luego de la conferencia internacional de OSM, la State of the Map (SOTM) de Holanda, surgió el primer intento de crear un grupo que reuniera las comunidades latinoamericanas pero dicha iniciativa no perduró.
+En 2013 comenzamos a conversar entre colaboradores de Argentina, Bolivia, Brasil y Chile la posibilidad de realizar un primer encuentro en la State of the Map 2014 en Buenos Aires, que organizábamos un grupo reducido en Argentina desde el año anterior. Aprovechando que en México se realizaría un mes antes al SOTM 2014 las conferencias AbreLatam/ConDatos, decidimos hacer una reunión previa allí resultando en un primer contacto, acordando la creación de la lista de correo Talk-Latam y tomando como nombre del grupo a &quot;OSM Latam&quot;.
+Luego, en la State of the Map de 2014 de Buenos Aires realizamos la reunión planificada con la presencia de representantes de más países además de los mencionados, en donde además de debatir necesidades comunes propuse realizar anualmente como proyecto común la State of the Map Latam, de alcance regional la cual tuvo su primera edición en Santiago de Chile en 2015 resultando todo un éxito. Se creó también el proyecto Mapazonia para coordinar tareas de mapeo entre varios países en la vasta área de la Amazonia.</p>
+
+<p>La actividad comenzará con un resumen de lo realizado por las comunidades que forman OSM Latam, luego una presentación breve de las actividades en desarrollo y finalizará con un taller de herramientas libres de mapeo de uso en nuestras comunidades.</p></div>
+
+      </div>
+      <div class="col-md-3 text-center control-col">
+        <div class="vote-count">
+          {{votes}}
+        </div>
+        <form name="form" role="form" novalidate ng-submit="upvote()">
+          <button class="btn btn-primary btn-lg vote-button" ng-disabled="hasVoted">
+            <span ng-if="!hasVoted">
+              I'm interested
+            </span>
+            <span ng-if="hasVoted">
+              Thanks
+            </span>
+
+            <span ng-class="{'glyphicon-heart': hasVoted, 'glyphicon-heart-empty': !hasVoted}"
+            class="glyphicon"></span>
+          </button>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="/static/bower_components/angular/angular.js"></script>
+<script src="/static/basic-theme/votes.js"></script>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

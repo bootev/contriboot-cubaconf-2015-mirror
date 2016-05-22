@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> Contriboot </title>
+    <meta name="keywords" content=" contributions, unconference ">
+    <meta name="theme-color" content="#601f27">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/static/basic-theme/images/favicon.jpg" type="image/x-icon">
+    <link href="/static/basic-theme/css/style.css" rel="stylesheet" type="text/css"/>
+
+    <!-- The HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body class="site">
+    <div class="wrapper">
+      <div class="">
+        <header class="site-header">
+          <div class="clearfix site-header-intro" >
+            <div class="col-xs-8">
+              <a href="/" class="headline-anchor">
+                <h1 class="headline">
+                  Conferencia Internacional de Software Libre <br>April 25-27 Palacio del Segundo Cabo Havana/Cuba
+                </h1>
+              </a>
+            </div>
+
+          </div>
+          <div class="clearfix">
+            <div class="col-xs-12">
+
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="container clearfix">
+        <nav class="navigation">
+          <ul class="menu">
+            <li class="menu__item"><a href="http://www.cubaconf.org/" class="menu__item__link menu__item__link--home">Home</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/tickets/" class="menu__item__link">Tickets</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/location/" class="menu__item__link">Location</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/sponsoring/" class="menu__item__link">Sponsoring</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/code-of-conduct/" class="menu__item__link">Code of Conduct</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/contact/" class="menu__item__link">Contact</a></li>
+            <li class="menu__item"><a href="http://www.cubaconf.org/blog" class="menu__item__link">Blog</a></li>
+            <li class="menu__item"><a href="/" class="menu__item__link">Contributions and Interests</a></li>
+          </ul>
+        </nav>
+        <div class="content">
+        <div ng-app="votes" ng-init="votes='15';hasVoted=false;id='086ac799428de2403c1241c29ba971fd'">
+  <div ng-controller="VoteController">
+
+    <div class="row">
+      <div class="col-md-9">
+        <h2>Building your own open source keyboard from scratch</h2>
+        <h3 class="submission-name">Jesse Vincent
+             - <a href="http://twitter.com/obra">@obra</a>
+        </h3>
+        <div class="submission-description"><p>Like many hackers, I tend to type a lot. And I’m somewhat picky about my keyboards.</p>
+
+<p>A few years ago, I started reading about the (incredibly sad) state of the art in ergonomic keyboards. Despite the fact that I’d never held a soldering iron, I somehow got it into my head that I should be able to make my own keyboard. Using a keyboard shell and plate designed by someone else, it took me a few weeks to solder together and debug my first working (and entirely open source) keyboard.</p>
+
+<p>Since then, I’ve explored layout design, construction techniques, materials, microcontrollers and a variety of layouts. I’ve also done a fair job exploring the wide variety of ways you can screw up as you make a keyboard. (I&#39;ve also gone on to start a keyboard company and run a successful Kickstarter for the Keyboardio Model 01)</p>
+
+<p>This talk will cover:</p>
+
+<p>The tiny bit of electronics knowledge you need in order to build a keyboard.
+The tools you need to build your first keyboard.
+The materials you’ll need to build your first keyboard (and where to get them.)
+How to design your own keyboard layout.
+How to design your own keyboard plate and shell.
+Options for turning your keyboard shell into something you can plunk some keys into. (I’ll talk about lasercutting and 3D printing. If there’s time, I might talk about resin casting and watercutting.)
+How to turn a shell, a bunch of keyswitches, a pile of diodes and a microcontroller into a working keyboard.
+Programming your keyboard’s microcontroller, so you can actually type on your keyboard.
+Debugging your keyboard.
+Most importantly, I’ll cover every mistake I can remember making as I hand-built my first few keyboards.</p></div>
+
+      </div>
+      <div class="col-md-3 text-center control-col">
+        <div class="vote-count">
+          {{votes}}
+        </div>
+        <form name="form" role="form" novalidate ng-submit="upvote()">
+          <button class="btn btn-primary btn-lg vote-button" ng-disabled="hasVoted">
+            <span ng-if="!hasVoted">
+              I'm interested
+            </span>
+            <span ng-if="hasVoted">
+              Thanks
+            </span>
+
+            <span ng-class="{'glyphicon-heart': hasVoted, 'glyphicon-heart-empty': !hasVoted}"
+            class="glyphicon"></span>
+          </button>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="/static/bower_components/angular/angular.js"></script>
+<script src="/static/basic-theme/votes.js"></script>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
